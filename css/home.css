@@ -7,6 +7,7 @@
 .search_icon {padding-right: 20px;}
 .lang_icon {padding: 0 10px;}
 .arrow_icon {width: 5px; height: 3px;}
+.hidden_menu {width: 20px; height: 16px; display: none;}
 .s_gnb {width: 100%; display: flex; justify-content: center;}
 .s_gnb_container {width: 650px; display: flex; justify-content: space-between; padding: 26px 40px 0; box-sizing: border-box;}
 .line_container {width: 100%; height: 2px; display: flex;}
@@ -36,9 +37,9 @@
 .s_footer {width: 100%;}
 .footer_container {width: 92%; margin: 0 auto; padding: 30px 0; display: flex;}
 .footer_container :nth-child(2) {padding: 0 10px; border-right: 1px solid #888;}
-.footer_container :nth-child(3) {padding: 0 10px; border-right: 1px solid #888; text-decoration: underline;}
-.footer_container :last-child {padding: 0 10px; text-decoration: underline;}
-
+.footer_container div :first-child {padding: 0 10px; border-right: 1px solid #888; text-decoration: underline;}
+.footer_container div :last-child {padding: 0 10px; text-decoration: underline;}
+.footer_s_logo {}
 
 
 /*animation*/
@@ -49,4 +50,24 @@
 @keyframes line_left {
     from{width: 0%;}
     to{width: 100%;}
+}
+
+/*media Query*/
+@media screen and (max-width: 768px) {
+    .samsung_slogan {display: none;}
+    .lang_icon {display: none;}
+    .arrow_icon {display: none;}
+    .hidden_menu {display: block;}
+    .main_bg_container {display: none;}
+    .img_grid_title {display: none;}
+    .s_gnb {display: none;}
+    .open_search {padding: 0 30px;}
+    .content_container {width: 100%;}
+    .footer_container {display: flex; flex-direction: column; padding-bottom: 20px;}
+    .footer_s_logo {width: 60px; height: 12px;}
+    .footer_container :nth-child(2) {padding: 16px 0 0; border: none;}
+    .footer_container div {padding-top: 10px;}
+    .footer_container div :first-child {padding-left: 0;}
+
+    
 }
