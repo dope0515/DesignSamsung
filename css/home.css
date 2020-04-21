@@ -61,7 +61,7 @@
     .main_bg_container {display: none;}
     .img_grid_title {display: none;}
     .s_gnb {display: none;}
-    .open_search {padding: 0 30px;}
+    .open_search {padding: 0 20px;}
     .content_container {width: 100%;}
     .footer_container {display: flex; flex-direction: column; padding-bottom: 20px;}
     .footer_s_logo {width: 60px; height: 12px;}
