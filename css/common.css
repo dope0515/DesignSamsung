@@ -7,9 +7,11 @@ h3 {font-size: 28px; line-height: 28px; letter-spacing: -0.42px; }
 h4 {font-family: 'SamsungOne-700'; font-size: 18px; font-weight: 100; line-height: 18px; letter-spacing: 0.72px; } /*header subtitle*/
 h5 {font-size: 18px; line-height: 22px; letter-spacing: -0.36px;}
 .text_01 {font-size: 18px; line-height: 18px; letter-spacing: 1.08px;}
-.text_02 {font-family: 'SamsungOne-700'; font-size: 14px; line-height: 14px; letter-spacing: -0.28px;}
-.text_03 {font-size: 14px; line-height: 14px; letter-spacing: -1.12px;}
+.text_02 {font-family: 'SamsungOne-700'; font-size: 14px; line-height: 14px; letter-spacing: -1.12px; font-weight: 700;}
+.text_03 {font-family: 'SamsungOne-700'; font-size: 14px; line-height: 14px; letter-spacing: -1.12px;}
+
 p {font-size: 12px; line-height: 12px;}
+
 
 /*text color*/
 .color_grey {color: #666;}

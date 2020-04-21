@@ -16,42 +16,28 @@
 /*main bg*/
 .main_bg_container {width: 100%; height: 70%; overflow: hidden;}
 .main_bg {background-image: url(../img/keyvisual_blue-story.jpg); background-size: cover; animation-name: bg_img_effect; animation-duration: 1s; background-position: center center; width: 100%; height: 100%; animation-fill-mode: forwards;}
+/*img_grid*/
+.img_grid {width: 100%;}
+.img_grid_title {padding: 30px 76px 120px;}
+.img_grid_title div {display: flex; justify-content: space-between;}
+.img_grid_title h3 {padding-top: 20px;}
+.img_grid h5 {width: fit-content; margin: 0 auto; padding: 10px 0 46px;}
+.img_grid_container {width: 92%; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between;}
+.content_container {width: 32.4%; padding-bottom: 80px;}
+.img_container {overflow: hidden; width: 100%; display: block;}
+.content_container h2 {padding: 26px 24px 0;}
+.content_container :nth-child(3) {padding: 14px 24px 0px;}
+.content_container p {padding: 14px 24px 0px;}
+.img_size:hover {cursor: pointer; transform: scale(1.1); }
+.img_size {width: 100%; transition: all 0.8s;}
+.border_line {width: 1px; height: 30px; border-left: 1px solid #555; margin: 0 auto;}
 
-/*content container*/
-.content_container {width: 100%;}
-.content_title {width: 90%; margin: 0 auto; box-sizing: border-box; padding-bottom: 60px;}
-.content_title :first-child { display: flex; justify-content: space-between; margin-top: 20px;}
-.list_container {width: 93%; height: 100vh; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap;}
-.list_content {width: 32.5%; height: 60%; margin-bottom: -80px;}
-.img_container { position: relative; overflow: hidden; width: 100%; height: 54%;}
-.list_bg {width: 100%; height: 100%; background-size: cover; background-position: center; transition: all 0.7s; position: absolute;}
-.list_bg:hover {transform: scale(1.1);} 
-.img_box {width: 100%; height: 100%;}
-.list_content h2 {padding: 26px 24px 0; box-sizing: border-box;}
-.list_content h5 {padding: 14px 24px 0; box-sizing: border-box;}
-.list_content p {padding: 18px 24px 0; box-sizing: border-box;}
-
-
-/**/
-.img_01 {background-image: url(../img/ctgbnr_2020qledtv.jpg);}
-.img_02 {background-image: url(../img/ctgbnr_galaxy-s20.jpg);}
-.img_03 {background-image: url(../img/ctgbnr_galaxy-z-flip.jpg);}
-.img_04 {background-image: url(../img/2020-if-thumbnail.jpg);}
-.img_05 {background-image: url(../img/ctgbnr_grande-ai.jpg);}
-.img_06 {background-image: url(../img/ctgbnr_new-lifestyle.jpg);}
-.img_07 {background-image: url(../img/ctgbnr_awards13.jpg);}
-.img_08 {background-image: url(../img/ctgbnr_galaxy-book.jpg);}
-.img_09 {background-image: url(../img/ctgbnr_the-plate.jpg);}
-.img_10 {background-image: url(../img/ctgbnr_global-designer-interview.jpg);}
-.img_11 {background-image: url(../img/ctgbnr_global-interview.jpg);}
-.img_12 {background-image: url(../img/ctgbnr_out-of-the-box.jpg);}
-.img_13 {background-image: url(../img/ctgbnr_galaxy-note10.jpg);}
-.img_14 {background-image: url(../img/ctgbnr_galaxy-watch-active2.jpg);}
-.img_15 {background-image: url(../img/ctgbnr_news_kr_021.jpg);}
-.img_16 {background-image: url(../img/ctgbnr_design-for-children.jpg);}
-.img_17 {background-image: url(../img/ctgbnr_samsung-design-history.jpg);}
-.img_18 {background-image: url(../img/ctgbnr_bespoke.jpg);}
-
+/*footer*/
+.s_footer {width: 100%;}
+.footer_container {width: 92%; margin: 0 auto; padding: 30px 0; display: flex;}
+.footer_container :nth-child(2) {padding: 0 10px; border-right: 1px solid #888;}
+.footer_container :nth-child(3) {padding: 0 10px; border-right: 1px solid #888; text-decoration: underline;}
+.footer_container :last-child {padding: 0 10px; text-decoration: underline;}
 
 
 
