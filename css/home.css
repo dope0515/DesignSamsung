@@ -15,11 +15,11 @@
 .line_right {background-color: black; width: 0%; height: 100%;}
 
 /*main bg*/
-.main_bg_container {width: 100%; height: 70%; overflow: hidden;}
-.main_bg {background-image: url(../img/keyvisual_blue-story.jpg); background-size: cover; animation-name: bg_img_effect; animation-duration: 1s; background-position: center center; width: 100%; height: 100%; animation-fill-mode: forwards;}
+.main_bg_container {width: 100%; height: 34vw; overflow: hidden;}
+.main_bg {width: 100%; height: 100%; background-image: url(../img/keyvisual_blue-story.jpg); background-size: cover; animation-name: bg_img_effect; animation-duration: 1s; background-position: center center; animation-fill-mode: forwards;}
 /*img_grid*/
 .img_grid {width: 100%;}
-.img_grid_title {padding: 30px 76px 120px;}
+.img_grid_title { padding: 0% 3.75%; padding-top: 2.34375vw; padding-bottom: 9.375vw;}
 .img_grid_title div {display: flex; justify-content: space-between;}
 .img_grid_title h3 {padding-top: 20px;}
 .img_grid h5 {width: fit-content; margin: 0 auto; padding: 10px 0 46px;}
@@ -30,16 +30,17 @@
 .content_container :nth-child(3) {padding: 14px 24px 0px;}
 .content_container p {padding: 14px 24px 0px;}
 .img_size:hover {cursor: pointer; transform: scale(1.1); }
-.img_size {width: 100%; transition: all 0.8s;}
+.img_size {width: 100%; transition: all 1s;}
 .border_line {width: 1px; height: 30px; border-left: 1px solid #555; margin: 0 auto;}
 
 /*footer*/
 .s_footer {width: 100%;}
-.footer_container {width: 92%; margin: 0 auto; padding: 30px 0; display: flex;}
+.footer_container {width: 92%; margin: 0 auto; padding: 30px 0; display: flex;} 
+.footer_s_logo {width: 90px; height: 15px;}
 .footer_container :nth-child(2) {padding: 0 10px; border-right: 1px solid #888;}
 .footer_container div :first-child {padding: 0 10px; border-right: 1px solid #888; text-decoration: underline;}
 .footer_container div :last-child {padding: 0 10px; text-decoration: underline;}
-.footer_s_logo {}
+
 
 
 /*animation*/
@@ -54,15 +55,20 @@
 
 /*media Query*/
 @media screen and (max-width: 768px) {
+    .s_header {height: auto;}
+    .samsung_logo {width: 42.26667vw; height: 5.86667vw;}
     .samsung_slogan {display: none;}
     .lang_icon {display: none;}
     .arrow_icon {display: none;}
     .hidden_menu {display: block;}
-    .main_bg_container {display: none;}
-    .img_grid_title {display: none;}
     .s_gnb {display: none;}
     .open_search {padding: 0 20px;}
     .content_container {width: 100%;}
+    .main_bg_container {height: 100vw;}
+    .main_bg {background-image: url(../img/keyvisual_blue-story-mobile.jpg);}
+    .img_grid_title {padding: 9.06667% 4% 20%;}
+    .img_grid_title div h1{font-size: 10.66667vw;}
+    .img_grid_title h3 {font-size: 4.8vw;}
     .footer_container {display: flex; flex-direction: column; padding-bottom: 20px;}
     .footer_s_logo {width: 60px; height: 12px;}
     .footer_container :nth-child(2) {padding: 16px 0 0; border: none;}
