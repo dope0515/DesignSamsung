@@ -1,12 +1,27 @@
 @font-face {
-    font-family: 'SamsungOne-400';
-    src: url(../font/SamsungOne-400.ttf);
-}
+    font-family:'NetflixSans_W_Bd';
+    src: url(../font/NetflixSans_W_Bd.woff2);}
+
 @font-face {
-    font-family: 'SamsungOne-700';
-    src: url(../font/SamsungOne-700.ttf);
-}
+    font-family:'NetflixSans_W_Blk';
+    src: url(../font/NetflixSans_W_Blk.woff2);}
+
 @font-face {
-    font-family: 'SamsungSharpSans-Bold';
-    src: url(../font/SamsungSharpSans-Bold.ttf);
-}
+    font-family:'NetflixSans_W_Lt';
+    src: url(../font/NetflixSans_W_Lt.woff2);}
+        
+@font-face {
+    font-family:'NetflixSans_W_Md';
+    src: url(../font/NetflixSans_W_Md.woff2);}
+            
+@font-face {
+    font-family:'NetflixSans_W_Rg';
+    src: url(../font/NetflixSans_W_Rg.woff2);}
+
+@font-face {
+    font-family:'NetflixSans_W_Th';
+    src: url(../font/NetflixSans_W_Th.woff2);}
+
+@font-face {
+    font-family:'nf-icon-v1-93';
+    src: url(../font/nf-icon-v1-93.woff);}
