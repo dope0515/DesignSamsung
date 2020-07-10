@@ -20,7 +20,7 @@
     
 
 </head>
-<body>
+<body id="body" onscroll="scrollFadeIn()">
 <!--header 시작-->
 <header class="s_header" id="m_header">
     <div class="open_search">
@@ -30,8 +30,9 @@
             <img src="img/icon_search.png" alt="" class="search_icon">
             <img src="img/icon_lang.png" alt="" class="lang_icon" onclick="langContainerToggle()">
             <img src="img/icon_arrow.png" alt="" class="arrow_icon">
-            <img src="img/icon_mobile_menu.png" alt="" id="hidden_menu" onclick="mobileMenuToggle()">
+            <img src="img/icon_mobile_menu.png" alt="" id="hidden_menu" onclick="mobileMenuOpen()">
         </div>
+        <span id="x_btn" onclick="mobileMenuClose()"></span>
     </div>
     <ul class="selcet_lang_container">
         <li><a href="">KR</a></li>
@@ -53,17 +54,18 @@
             </h4>
             <ul class="hidden_menu_lang">
                 <li class="hidden_menu_lang_container">
-                    <img src="img/icon_lang.png" alt="lang_img" class="hidden_menu_lagn_icon">
+                    <img src="img/icon_lang.png" alt="lang_img" class="hidden_menu_lang_icon">
                     <h1>KR</h1>
                     <div></div>
                     <h1>EN</h1>
                 </li>
             </ul>
+            <img src="img/txt_slogan_m.png" alt="" class="m_slogan">
         </div>
     </nav>
 <script>
     /*새로고침시 항상 페이지에서 시작*/
-    window.onbeforeunload = function() {window.scrollTo(0,0);}
+    //window.onbeforeunload = function() {window.scrollTo(0,0);}
     var arrowState = 0;
 
     /*언어선택 토글 메뉴*/
@@ -83,10 +85,23 @@
         }
     }
     /*모바일 토글 메뉴*/
-    function mobileMenuToggle(){
-        document.getElementById("mobile_menu").style = "height:100%"
-    }
+    var menuState = 0;
+    function mobileMenuOpen(){
+        document.getElementById("mobile_menu").style = "top:0";
+        document.getElementById("body").style = "height:100vh;overflow:hidden;";
+        document.getElementsByClassName("search_lang")[0].style = "top:-100%";
+        document.getElementById("x_btn").style = " padding:2.3vw;"
+        }
+        
+    function mobileMenuClose(){
+        document.getElementById("mobile_menu").style = "top:-100vh;";
+        document.getElementById("body").style = "height:auto;overflow:auto;";
+        document.getElementsByClassName("search_lang")[0].style = "top:40%; transition-delay: 0.2s;";
+        document.getElementById("x_btn").style = " padding:0vw;"
+        }
+    
 
+    /*slogan & gnb exchange */
     var preYscroll = window.pageYOffset; // 기본은 항상 0이다.
     window.onscroll = function () {
         var presentYscroll = window.pageYOffset;
@@ -104,13 +119,11 @@
             document.getElementsByClassName("s_gnb_container")[0].style = "top:60px; transition:all 0.2s";
             document.getElementsByClassName("samsung_slogan")[0].style = "width:368px;height:24px;"
         }
-
-        else {
-            document.getElementsByClassName("s_header")[0].style = "height:130px;"
-            } //아닐 경우에는 다시 롤백
-        }
+    }
         preYscroll = presentYscroll;
     }
+
+    
 
 </script>
 </header>
@@ -132,8 +145,8 @@
         <h3>삼성 블루에 담긴 디자이너의 생각</h3>
     </div>
 
-    <ul class="img_grid_container">
-        <li class="content_container">
+    <ul class="img_grid_container" id="grid_container">
+        <li class="content_container" >
             <a class="img_container">
                 <img src="img/ctgbnr_2020qledtv.jpg" alt="qledtv_img" class="img_size">
             </a>
@@ -297,6 +310,18 @@
     </div>
 </footer>
 <!--footer 끝-->
-
+<script>
+    
+    function scrollFadeIn() {
+    var bodyScrollTop = document.body.scrollTop;
+    var firstGridOffsetTop = document.getElementById("grid_container").offsetTop;    
+    if(bodyScrollTop >= firstGridOffsetTop) {
+        for(i=0;i<3;i++) 
+        {document.getElementsByClassName("img_size")[i].style = "width:100%";}
+    }
+    console.log(bodyScrollTop);
+}
+    
+</script>
 </body>
 </html>
