@@ -295,7 +295,7 @@
 }
 
 .img_size {
-    width: 0%;
+    width: 100%;
     transition: all 1s;
 }
 
@@ -430,7 +430,7 @@
         background-color: #fff;
         position: relative;
         display: block;
-        top: -100vh;
+        top: -140vh;
         transition: top 0.5s;
         
     }
