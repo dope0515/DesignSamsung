@@ -12,15 +12,38 @@
     <link rel="stylesheet" type="text/css" href="css/home.css"> <!-- Home 화면 css -->
     <link rel="stylesheet" type="text/css" href="css/common.css"> <!-- common css -->
     <link rel="stylesheet" type="text/css" href="css/font.css"> <!-- 폰트 링크 -->
+    
     <!-- 파비콘 링크 -->
     <link rel="shorcut icon" href="img/favicon.ico">
     <link rel="icon" href="img/favicon.ico">
-
-
-    
-
+    <script type="text/javascript" src="js/javascript.js"></script>
 </head>
-<body id="body" onscroll="scrollFadeIn()">
+<body id="body">
+<script>
+/*slogan & gnb exchange */
+var preYscroll = window.pageYOffset; // 기본은 항상 0이다.
+var htmlBody = document.getElementById("body")
+window.onscroll = function () {
+    var presentYscroll = window.pageYOffset;
+    if(document.body.clientWidth > 769) {
+    if (presentYscroll == 130){
+        document.getElementsByClassName("s_header")[0].style = "height:60px;"
+    } //Y좌표가 130px 이상 일 때 header의 높이 값이 60px로 변환
+
+    else if(presentYscroll > 1) {
+        document.getElementsByClassName("s_gnb_container")[0].style = "top:0; transition:all 0.2s";
+        document.getElementsByClassName("samsung_slogan")[0].style = "width:0px; height:0px;"
+    }
+
+    else if(presentYscroll < 1) {
+        document.getElementsByClassName("s_gnb_container")[0].style = "top:60px; transition:all 0.2s";
+        document.getElementsByClassName("samsung_slogan")[0].style = "width:368px;height:24px;"
+    }
+}
+    preYscroll = presentYscroll;
+    htmlBody.addEventListener("scroll",onscroll)
+}
+</script>
 <!--header 시작-->
 <header class="s_header" id="m_header">
     <div class="open_search">
@@ -63,69 +86,6 @@
             <img src="img/txt_slogan_m.png" alt="" class="m_slogan">
         </div>
     </nav>
-<script>
-    /*새로고침시 항상 페이지에서 시작*/
-    //window.onbeforeunload = function() {window.scrollTo(0,0);}
-    var arrowState = 0;
-
-    /*언어선택 토글 메뉴*/
-    function langContainerToggle() {
-        if(arrowState == 0) {
-        document.getElementsByClassName("s_header")[0].style = "height:130px;";
-        document.getElementsByClassName("arrow_icon")[0].style = "transform:rotate(180deg)";
-        document.getElementsByClassName("selcet_lang_container")[0].style = "top:54%";
-        arrowState = 1;
-        }
-
-        else if(arrowState == 1) {
-        document.getElementsByClassName("s_header")[0].style = "height:60px;"
-        document.getElementsByClassName("arrow_icon")[0].style = "transform:rotate(0deg)";
-        document.getElementsByClassName("selcet_lang_container")[0].style = "top:20%";
-        arrowState = 0;
-        }
-    }
-    /*모바일 토글 메뉴*/
-    var menuState = 0;
-    function mobileMenuOpen(){
-        document.getElementById("mobile_menu").style = "top:0";
-        document.getElementById("body").style = "height:100vh;overflow:hidden;";
-        document.getElementsByClassName("search_lang")[0].style = "top:-100%";
-        document.getElementById("x_btn").style = " padding:2.3vw;"
-        }
-        
-    function mobileMenuClose(){
-        document.getElementById("mobile_menu").style = "top:-140vh;";
-        document.getElementById("body").style = "height:auto;overflow:auto;";
-        document.getElementsByClassName("search_lang")[0].style = "top:40%; transition-delay: 0.2s;";
-        document.getElementById("x_btn").style = " padding:0vw;"
-        }
-    
-
-    /*slogan & gnb exchange */
-    var preYscroll = window.pageYOffset; // 기본은 항상 0이다.
-    window.onscroll = function () {
-        var presentYscroll = window.pageYOffset;
-        if(document.body.clientWidth > 769) {
-        if (presentYscroll == 130){
-            document.getElementsByClassName("s_header")[0].style = "height:60px;"
-        } //Y좌표가 130px 이상 일 때 header의 높이 값이 60px로 변환
-
-        else if(presentYscroll > 1) {
-            document.getElementsByClassName("s_gnb_container")[0].style = "top:0; transition:all 0.2s";
-            document.getElementsByClassName("samsung_slogan")[0].style = "width:0px; height:0px;"
-        }
-
-        else if(presentYscroll < 1) {
-            document.getElementsByClassName("s_gnb_container")[0].style = "top:60px; transition:all 0.2s";
-            document.getElementsByClassName("samsung_slogan")[0].style = "width:368px;height:24px;"
-        }
-    }
-        preYscroll = presentYscroll;
-    }
-
-    
-
-</script>
 </header>
 <!--header 끝-->
 <!--main 시작-->
@@ -310,18 +270,5 @@
     </div>
 </footer>
 <!--footer 끝-->
-<script>
-    
-    function scrollFadeIn() {
-    var bodyScrollTop = document.body.scrollTop;
-    var firstGridOffsetTop = document.getElementById("grid_container").offsetTop;    
-    if(bodyScrollTop >= firstGridOffsetTop) {
-        for(i=0;i<3;i++) 
-        {document.getElementsByClassName("img_size")[i].style = "width:100%";}
-    }
-    console.log(bodyScrollTop);
-}
-    
-</script>
 </body>
 </html>

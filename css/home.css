@@ -460,7 +460,10 @@
 
     .open_search {padding: 0 20px;}
 
-    .content_container {width: 100%;}
+    .content_container {
+        width: 100%;
+        padding: 0;
+    }
 
     .main_bg_container {height: 100vw;}
 
@@ -471,6 +474,10 @@
     .img_grid_title div h1{font-size: 10.66667vw;}
 
     .img_grid_title h3 {font-size: 4.8vw;}
+
+    .img_size {
+        height: 54%;
+    }
 
     .footer_container {
         display: flex;
