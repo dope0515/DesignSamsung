@@ -19,12 +19,22 @@
     <script type="text/javascript" src="js/javascript.js"></script>
 </head>
 <body id="body">
+    <div id="icon_top" onclick="pageUp()">
+        <img src="img/icon_top.png" alt="" style="width: 6px;">
+    </div>
 <script>
 /*slogan & gnb exchange */
 var preYscroll = window.pageYOffset; // 기본은 항상 0이다.
-var htmlBody = document.getElementById("body")
+var htmlBody = document.getElementById("body");
+var iconTop = document.getElementById("icon_top");
+
 window.onscroll = function () {
     var presentYscroll = window.pageYOffset;
+    /*Y값이 500px이상 일때 iconTop 표시*/
+    if (presentYscroll > 500) {
+        iconTop.style = "display:flex";
+    }
+    else {iconTop.style = "display:none";}
     if(document.body.clientWidth > 769) {
     if (presentYscroll == 130){
         document.getElementsByClassName("s_header")[0].style = "height:60px;"
@@ -48,12 +58,12 @@ window.onscroll = function () {
 <header class="s_header" id="m_header">
     <div class="open_search">
         <a href="index.html"><img src="img/logo_samsung_design_x2.png" alt="" class="samsung_logo"></a>
-        <img src="img/txt_slogan_x2.png" alt="" class="samsung_slogan">
+        <img src="img/txt_slogan_x2.png" alt="txt_slogan" class="samsung_slogan">
         <div class="search_lang">
-            <img src="img/icon_search.png" alt="" class="search_icon">
-            <img src="img/icon_lang.png" alt="" class="lang_icon" onclick="langContainerToggle()">
-            <img src="img/icon_arrow.png" alt="" class="arrow_icon">
-            <img src="img/icon_mobile_menu.png" alt="" id="hidden_menu" onclick="mobileMenuOpen()">
+            <img src="img/icon_search.png" alt="search_icon" class="search_icon">
+            <img src="img/icon_lang.png" alt="lang_icon" class="lang_icon" onclick="langContainerToggle()">
+            <img src="img/icon_arrow.png" alt="arrow_icon" class="arrow_icon">
+            <img src="img/icon_mobile_menu.png" alt="m_menu_icon" id="hidden_menu" onclick="mobileMenuOpen()">
         </div>
         <span id="x_btn" onclick="mobileMenuClose()"></span>
     </div>
@@ -64,16 +74,16 @@ window.onscroll = function () {
     <nav class="s_gnb" id="mobile_menu">
         <div class="s_gnb_container">
             <h4 class="gnb_title">
-                <a href="" >WE DESIGN</a>
+                <a href="http://design.samsung.com/kr/we-design.html" >WE DESIGN</a>
             </h4>
             <h4 class="gnb_title">
-                <a href="">WE DISCOVER</a>
+                <a href="http://design.samsung.com/kr/we-discover.html">WE DISCOVER</a>
             </h4>
             <h4 class="gnb_title">
-                <a href="">ABOUT US</a>
+                <a href="http://design.samsung.com/kr/about-us.html">ABOUT US</a>
             </h4>
             <h4 class="gnb_title">
-                <a href="">NEWS</a>
+                <a href="http://design.samsung.com/kr/news.html">NEWS</a>
             </h4>
             <ul class="hidden_menu_lang">
                 <li class="hidden_menu_lang_container">
