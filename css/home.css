@@ -1,4 +1,8 @@
 /*header & gnb*/
+* {
+    -webkit-overflow-scrolling: touch;
+}
+
 .s_header {
     width: 100%;
     position: fixed;
@@ -486,7 +490,7 @@
 
     .content_container {
         width: 100%;
-        padding: 80px;
+        padding-bottom: 80px;
     }
 
     .main_bg_container {height: 100vw;}
