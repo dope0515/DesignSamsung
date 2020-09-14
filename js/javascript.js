@@ -1,16 +1,8 @@
 /*새로고침시 항상 페이지에서 시작*/
 window.onbeforeunload = function() {window.scrollTo(0,0);}
-var arrowState = 0;
-
-/*scroll Top*/
-var iconTop = document.getElementById("icon_top");
-
-function pageUp() {
-    document.body.scrollTo({top:0,left:0,behavior:'smooth'})
-}
-
 
 /*언어선택 토글 메뉴*/
+var arrowState = 0;
 function langContainerToggle() {
     if(arrowState == 0) {
     document.getElementsByClassName("s_header")[0].style = "height:130px;";
