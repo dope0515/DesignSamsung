@@ -44,10 +44,14 @@ function scrollFadeIn() {
     }
     }
     
-
-   var userAgentStr = navigator.userAgent.toLowerCase();
-
-   if(userAgentStr.indexOf('iphone') > -1 || userAgentStr.indexOf('ipad') > -1 || userAgentStr.indexOf('ipod') > -1) {
-    alert('ios!');
-    alert(userAgentStr);
-   }
+ $(document).ready(function(){
+            var userAgentStr = navigator.userAgent.toLowerCase();
+            if(userAgentStr.indexOf('iphone') > -1 || userAgentStr.indexOf('ipad') > -1 || userAgentStr.indexOf('ipod') > -1) {
+            
+            $('#targeting').attr('href','#none');
+            $('#targeting').click(function(){
+            window.open('https://live.lge.co.kr/tiiun-3');
+             });
+        }
+        });
+   
